@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ufwb version="1.9">
+    <grammar name="Perforce" start="id:2503" author="ixia">
+        <structure name="PerforceCalls" id="2503" length="0" alignment="0" repeatmax="-1" encoding="ISO_8859-1:1987" endian="big" signed="no">
+            <structure name="Call" id="8737" length="CallLength+5" alignment="0" repeatmax="-1" strokecolor="00FF00">
+                <number name="LengthXOR" id="8736" fillcolor="79FF8F" type="integer" length="1"/>
+                <number name="CallLength" id="8735" fillcolor="237BFF" type="integer" length="2" endian="little"/>
+                <number name="Unknown" id="2505" fillcolor="B9BCC5" type="integer" length="2"/>
+                <structure name="Parameter" id="3756" length="len(ParameterName)+4+Length+1" alignment="0" repeatmax="-1" fillcolor="E14B00">
+                    <string name="Name" id="3758" fillcolor="E1971F" type="zero-terminated"/>
+                    <number name="Length" id="3759" fillcolor="55FFFF" type="integer" length="4" endian="little"/>
+                    <string name="Value" id="3761" fillcolor="F15000" type="fixed-length" length="Length"/>
+                    <string name="Separator" id="8732" strokecolor="F1F1F1" fillcolor="0E93EB" type="fixed-length" length="1"/>
+                </structure>
+            </structure>
+        </structure>
+    </grammar>
+</ufwb>
